@@ -4773,3 +4773,254 @@ canvas {
     letter-spacing: 0.08em;
   }
 }
+
+/* Editorial PNG collage layers for Zuri source/product storytelling. */
+.editorial-png {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  width: var(--png-width, 260px);
+  max-width: none;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  opacity: var(--png-opacity, 0.96);
+  filter: drop-shadow(0 26px 30px rgba(23, 23, 19, 0.13));
+  transform: translate3d(0, 0, 0) rotate(var(--png-rotate, 0deg));
+}
+
+.hero-home,
+.origin-section,
+.why-section,
+.about-premium-hero,
+.about-premium-intro {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-home > :not(.editorial-png),
+.origin-section > :not(.editorial-png),
+.why-section > :not(.editorial-png),
+.about-premium-hero > :not(.editorial-png),
+.about-premium-intro > :not(.editorial-png) {
+  position: relative;
+  z-index: 2;
+}
+
+.home-png-branch {
+  --png-width: clamp(190px, 25vw, 420px);
+  --png-rotate: -18deg;
+  top: 98px;
+  right: -112px;
+  z-index: 2;
+  opacity: 0.86;
+}
+
+.home-png-nuts {
+  --png-width: clamp(120px, 15vw, 230px);
+  --png-rotate: 13deg;
+  left: clamp(24px, 6vw, 110px);
+  bottom: 150px;
+  z-index: 2;
+  opacity: 0.88;
+}
+
+.origin-png-fruit {
+  --png-width: clamp(170px, 21vw, 350px);
+  --png-rotate: 10deg;
+  right: -104px;
+  top: 26px;
+  opacity: 0.72;
+}
+
+.why-png-butter {
+  --png-width: clamp(150px, 20vw, 320px);
+  --png-rotate: -11deg;
+  left: -88px;
+  top: 32px;
+  opacity: 0.68;
+}
+
+.about-png-branch {
+  --png-width: clamp(180px, 23vw, 380px);
+  --png-rotate: -17deg;
+  right: -116px;
+  top: 104px;
+  opacity: 0.78;
+}
+
+.about-png-butter {
+  --png-width: clamp(130px, 16vw, 260px);
+  --png-rotate: 13deg;
+  left: clamp(24px, 5vw, 86px);
+  bottom: 116px;
+  opacity: 0.76;
+}
+
+.about-origin-png-nuts {
+  --png-width: clamp(130px, 16vw, 260px);
+  --png-rotate: -15deg;
+  right: clamp(22px, 8vw, 120px);
+  bottom: 20px;
+  opacity: 0.72;
+}
+
+@media (width <= 900px) {
+  .home-png-branch,
+  .origin-png-fruit,
+  .about-png-branch {
+    --png-width: clamp(130px, 25vw, 240px);
+    opacity: 0.48;
+  }
+
+  .home-png-nuts,
+  .why-png-butter,
+  .about-png-butter,
+  .about-origin-png-nuts {
+    --png-width: clamp(96px, 18vw, 170px);
+    opacity: 0.52;
+  }
+}
+
+@media (width <= 620px) {
+  .home-png-branch,
+  .home-png-nuts,
+  .origin-png-fruit,
+  .why-png-butter,
+  .about-png-branch,
+  .about-png-butter,
+  .about-origin-png-nuts {
+    display: none;
+  }
+}
+
+/* Final About hero collision pass: keep display type, product, copy, and links in separate lanes. */
+body[data-page="about"] .about-premium-hero {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.92fr) minmax(300px, 0.78fr) !important;
+  grid-template-rows: auto auto auto 1fr auto auto !important;
+  align-items: end !important;
+  column-gap: clamp(32px, 6vw, 112px) !important;
+  min-height: 760px !important;
+}
+
+body[data-page="about"] .about-eyebrow {
+  position: relative !important;
+  z-index: 5 !important;
+  grid-column: 1 / -1 !important;
+  grid-row: 1 !important;
+  max-width: 820px !important;
+  margin: 0 0 clamp(44px, 6vw, 78px) !important;
+}
+
+body[data-page="about"] .about-premium-hero h1 {
+  position: relative !important;
+  z-index: 3 !important;
+  grid-column: 1 / -1 !important;
+  grid-row: 2 !important;
+  max-width: 1040px !important;
+  margin: 0 !important;
+  font-size: clamp(72px, 12.4vw, 210px) !important;
+  pointer-events: none !important;
+}
+
+body[data-page="about"] .about-hero-line {
+  position: relative !important;
+  z-index: 5 !important;
+  grid-column: 1 !important;
+  grid-row: 3 !important;
+  width: fit-content !important;
+  max-width: 420px !important;
+  margin: clamp(16px, 2.4vw, 28px) 0 0 !important;
+  border-radius: 14px !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+  padding: 8px 12px !important;
+}
+
+body[data-page="about"] .about-hero-product {
+  position: absolute !important;
+  top: clamp(310px, 32vw, 390px) !important;
+  right: clamp(48px, 9vw, 170px) !important;
+  left: auto !important;
+  z-index: 2 !important;
+  width: min(420px, 30vw) !important;
+  transform: none !important;
+}
+
+body[data-page="about"] .about-hero-note {
+  position: relative !important;
+  z-index: 5 !important;
+  grid-column: 1 !important;
+  grid-row: 5 !important;
+  max-width: 520px !important;
+  margin: clamp(28px, 4vw, 52px) 0 0 !important;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.84) !important;
+  padding: 12px 14px !important;
+}
+
+body[data-page="about"] .about-hero-social {
+  position: relative !important;
+  z-index: 5 !important;
+  grid-column: 1 !important;
+  grid-row: 6 !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  justify-content: flex-start !important;
+  margin-top: 16px !important;
+}
+
+@media (width <= 768px) {
+  body[data-page="about"] .about-premium-hero {
+    display: block !important;
+    min-height: auto !important;
+    padding: 30px 22px 56px !important;
+  }
+
+  body[data-page="about"] .about-eyebrow {
+    max-width: 100% !important;
+    margin: 28px 0 22px !important;
+    font-size: 11px !important;
+    letter-spacing: 0.16em !important;
+  }
+
+  body[data-page="about"] .about-premium-hero h1 {
+    max-width: 100% !important;
+    font-size: clamp(52px, 16vw, 72px) !important;
+    line-height: 0.86 !important;
+  }
+
+  body[data-page="about"] .about-hero-line {
+    max-width: 100% !important;
+    margin-top: 16px !important;
+  }
+
+  body[data-page="about"] .about-hero-product {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    width: min(100%, 340px) !important;
+    margin: 28px auto 0 !important;
+    transform: none !important;
+  }
+
+  body[data-page="about"] .about-hero-note {
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    max-width: 100% !important;
+    margin-top: 26px !important;
+  }
+
+  body[data-page="about"] .about-hero-social {
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    margin-top: 18px !important;
+    justify-content: center !important;
+  }
+}

@@ -215,6 +215,11 @@ a {
   min-height: 760px;
   padding: 54px var(--gutter);
   overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(320px, 0.78fr);
+  grid-template-rows: auto 1fr auto auto;
+  column-gap: clamp(32px, 6vw, 112px);
+  align-items: end;
 }
 
 .mini-nav {
@@ -236,8 +241,13 @@ a {
 }
 
 .eyebrow {
-  max-width: 500px;
-  margin: 0 0 138px;
+  position: relative;
+  z-index: 5;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  align-self: start;
+  max-width: 620px;
+  margin: 0 0 clamp(54px, 8vw, 110px);
   color: rgba(23, 23, 19, 0.64);
   font-size: clamp(13px, 1.1vw, 18px);
   font-weight: 900;
@@ -248,61 +258,75 @@ a {
 
 .hero-title {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  grid-column: 1 / -1;
+  grid-row: 2;
   max-width: 1180px;
   margin: 0;
   font-family: 'Inter', 'Helvetica Neue', sans-serif;
-  font-size: clamp(92px, 16vw, 285px);
+  font-size: clamp(76px, 13vw, 230px);
   font-weight: 900;
   letter-spacing: 0;
   line-height: 0.74;
   text-transform: uppercase;
+  pointer-events: none;
 }
 
 .hero-product {
   position: absolute;
-  left: 46%;
-  top: 300px;
-  z-index: 3;
+  right: clamp(42px, 8vw, 176px);
+  left: auto;
+  top: clamp(270px, 31vw, 340px);
+  z-index: 2;
   width: auto;
   max-width: min(430px, 30vw);
   height: min(420px, 44vh);
   object-fit: contain;
-  transform: translateX(-8%);
+  transform: none;
   filter: drop-shadow(0 30px 34px rgba(23, 23, 19, 0.17));
 }
 
 .hero-photo {
   position: absolute;
-  left: 51%;
-  top: 304px;
-  z-index: 3;
-  width: min(540px, 34vw);
-  height: 330px;
+  right: clamp(64px, 10vw, 220px);
+  left: auto;
+  top: clamp(286px, 31vw, 348px);
+  z-index: 2;
+  width: min(500px, 30vw);
+  height: clamp(250px, 20vw, 330px);
   border-radius: 18px;
   object-fit: cover;
-  transform: translateX(-22%);
+  transform: none;
   box-shadow: 0 28px 44px rgba(23, 23, 19, 0.12);
 }
 
 .hero-note {
-  position: absolute;
-  left: var(--gutter);
-  bottom: 58px;
+  position: relative;
+  z-index: 5;
+  grid-column: 1;
+  grid-row: 3;
   max-width: 520px;
-  margin: 0;
+  margin: clamp(24px, 4vw, 48px) 0 0;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.82);
+  padding: 12px 14px;
   color: rgba(23, 23, 19, 0.74);
   font-weight: 600;
+  backdrop-filter: blur(8px);
 }
 
 .hero-actions {
-  position: absolute;
-  right: var(--gutter);
-  bottom: 58px;
+  position: relative;
   z-index: 5;
+  grid-column: 1;
+  grid-row: 4;
+  justify-self: start;
+  align-self: start;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  margin-top: 18px;
+  max-width: min(100%, 430px);
 }
 
 .button,
@@ -610,6 +634,89 @@ button:focus-visible {
   padding: 64px var(--gutter) 26px;
 }
 
+.editorial-png {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  width: var(--png-width, 260px);
+  max-width: none;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  opacity: var(--png-opacity, 0.96);
+  filter: drop-shadow(0 26px 30px rgba(23, 23, 19, 0.13));
+  transform: translate3d(0, 0, 0) rotate(var(--png-rotate, 0deg));
+}
+
+.hero > :not(.editorial-png):not(.hero-product):not(.hero-photo):not(.hero-title):not(.hero-note):not(.hero-actions):not(.mini-nav),
+.section > :not(.editorial-png),
+.site-footer > :not(.editorial-png) {
+  position: relative;
+  z-index: 2;
+}
+
+.product-hero-png-branch {
+  --png-width: clamp(180px, 24vw, 390px);
+  --png-rotate: -15deg;
+  top: 88px;
+  right: -92px;
+}
+
+.product-hero-png-nuts {
+  --png-width: clamp(120px, 14vw, 220px);
+  --png-rotate: 12deg;
+  left: clamp(18px, 4vw, 64px);
+  bottom: 126px;
+}
+
+.benefits-png-fruit {
+  --png-width: clamp(160px, 20vw, 330px);
+  --png-rotate: 11deg;
+  right: -110px;
+  top: 38px;
+  opacity: 0.74;
+}
+
+.ritual-png-butter {
+  --png-width: clamp(170px, 22vw, 340px);
+  --png-rotate: -9deg;
+  right: clamp(18px, 8vw, 140px);
+  top: 18%;
+  z-index: 1;
+  opacity: 0.82;
+}
+
+.ingredients-png-nuts {
+  --png-width: clamp(130px, 17vw, 260px);
+  --png-rotate: -13deg;
+  left: -52px;
+  bottom: 26px;
+  opacity: 0.76;
+}
+
+.contact-png-butter {
+  --png-width: clamp(150px, 20vw, 310px);
+  --png-rotate: 12deg;
+  top: 148px;
+  right: -38px;
+  z-index: 1;
+  opacity: 0.36;
+}
+
+.contact-png-nuts {
+  --png-width: clamp(110px, 13vw, 210px);
+  --png-rotate: -16deg;
+  right: clamp(18px, 5vw, 84px);
+  bottom: 34px;
+  left: auto;
+  z-index: 1;
+  opacity: 0.34;
+}
+
+.contact-hero .eyebrow {
+  margin-bottom: clamp(42px, 5vw, 72px);
+}
+
 .footer-inner {
   display: grid;
   gap: 48px;
@@ -725,6 +832,7 @@ button:focus-visible {
   .hero {
     min-height: 720px;
     padding: 30px 22px 48px;
+    display: block;
   }
 
   .hero,
@@ -991,7 +1099,7 @@ button:focus-visible {
 }
 
 .hero-title {
-  font-size: clamp(52px, 15vw, 285px);
+  font-size: clamp(52px, 13vw, 230px);
 }
 
 .section h2,
@@ -1023,4 +1131,70 @@ button:focus-visible {
   max-width: calc(100% - (var(--gutter) * 2));
   overflow: hidden;
   white-space: nowrap;
+}
+
+.hero-product {
+  width: auto;
+  max-width: min(430px, 30vw);
+  height: min(420px, 44vh);
+  max-height: 420px;
+  object-fit: contain;
+}
+
+.product-hero-png-nuts {
+  display: none;
+}
+
+@media (width <= 768px) {
+  .hero-product {
+    width: min(330px, 86vw);
+    max-width: min(330px, 86vw);
+    height: auto;
+    max-height: 285px;
+  }
+}
+
+.editorial-png {
+  max-width: none;
+}
+
+@media (width <= 900px) {
+  .product-hero-png-branch,
+  .benefits-png-fruit,
+  .contact-png-butter {
+    --png-width: clamp(130px, 24vw, 230px);
+    opacity: 0.52;
+  }
+
+  .product-hero-png-nuts,
+  .ingredients-png-nuts,
+  .contact-png-nuts {
+    --png-width: clamp(92px, 18vw, 160px);
+    opacity: 0.64;
+  }
+
+  .ritual-png-butter {
+    --png-width: clamp(120px, 25vw, 210px);
+    right: 18px;
+    top: 42%;
+    opacity: 0.42;
+  }
+}
+
+@media (width <= 620px) {
+  .product-hero-png-branch,
+  .product-hero-png-nuts,
+  .benefits-png-fruit,
+  .ingredients-png-nuts,
+  .contact-png-butter,
+  .contact-png-nuts {
+    display: none;
+  }
+
+  .ritual-png-butter {
+    --png-width: 150px;
+    right: -46px;
+    top: 46%;
+    opacity: 0.28;
+  }
 }
