@@ -64,39 +64,47 @@ a {
 
 .brand-mark {
   display: grid;
-  width: 42px;
-  height: 42px;
+  width: 64px;
+  height: 52px;
   place-items: center;
-  border: 1.5px solid currentColor;
-  border-radius: 14px;
   text-decoration: none;
+  color: var(--ink);
 }
 
 .mark-symbol {
   position: relative;
-  width: 29px;
-  height: 29px;
-  border: 2px solid currentColor;
-  border-radius: 12px;
+  display: block;
+  width: 58px;
+  height: 46px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0;
+  line-height: 1;
 }
 
 .mark-symbol::before,
 .mark-symbol::after {
-  content: "";
   position: absolute;
-  top: 5px;
-  width: 13px;
-  height: 17px;
-  border: 2px solid currentColor;
-  border-radius: 50%;
+  top: 50%;
+  font-weight: 700;
+  line-height: 0.8;
+  transform: translateY(-50%);
 }
 
 .mark-symbol::before {
-  left: 4px;
+  content: "Z";
+  left: 0;
+  z-index: 1;
+  color: var(--ink);
+  font-size: 48px;
 }
 
 .mark-symbol::after {
-  right: 4px;
+  content: "N";
+  left: 24px;
+  z-index: 2;
+  color: var(--sage);
+  font-size: 46px;
+  font-style: italic;
 }
 
 .wordmark {
@@ -899,6 +907,16 @@ button:focus-visible {
   .wordmark {
     display: none;
   }
+  .brand-mark {
+    width: 56px;
+    height: 46px;
+  }
+
+  .mark-symbol {
+    transform: scale(0.88);
+    transform-origin: left center;
+  }
+
 
   .menu-btn {
     display: block;

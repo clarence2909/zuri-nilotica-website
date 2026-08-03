@@ -1,13 +1,13 @@
 const brands = [
-  { name: "The Rare Ingredient", title: "COLD-PRESSED. SILKY. SINGLE-INGREDIENT.", copy: "Cold-pressed from wild Vitellaria nilotica in Northern Uganda, this rare balm melts on contact and absorbs quickly, delivering rich moisture with a silky finish.", year: "Northern Uganda", bg: "linear-gradient(135deg, #f5f0e8, #c8a456 48%, #e8dcc8)", panel: "#f5f0e8", color: "#1a3a2a" },
-  { name: "The Silky Difference", title: "LOWER MELTING POINT. INSTANT ABSORPTION.", copy: "Nilotica naturally contains up to 57% oleic acid, compared with about 40% in standard shea. The result is a smooth, non-grainy texture and fast absorption.", year: "East African Nile Belt", bg: "linear-gradient(135deg, #e8dcc8, #8fa88b 48%, #d4c9b5)", panel: "#e8dcc8", color: "#1a3a2a" },
-  { name: "One-Jar Ritual", title: "FACE. LIPS. BODY. HAIR ENDS.", copy: "One versatile jar replaces unnecessary complexity. Zero synthetic fillers, zero fragrance - just pure East African luxury for everyday softness.", year: "100% Nilotica Shea", bg: "linear-gradient(135deg, #00539C, #00539C 45%, #00539C)", panel: "#1a3a2a", color: "#f5f0e8" },
-  { name: "Women-Led Source", title: "DIRECT PARTNERSHIPS. SHARED VALUE.", copy: "Women-led cooperatives in Northern Uganda gather wild fallen nuts. Fair-trade premiums help support community infrastructure, financial independence, and tree conservation.", year: "Cooperative Sourcing", bg: "linear-gradient(135deg, #c8a456, #a08540 50%, #f5f0e8)", panel: "#c8a456", color: "#1a3a2a" }
+  { name: "The Rare Ingredient", title: "COLD PRESSED. SILKY. ONE INGREDIENT.", copy: "Cold pressed from wild Vitellaria nilotica in Northern Uganda, this rare balm melts on contact and absorbs quickly, delivering rich moisture with a silky finish.", year: "Northern Uganda", bg: "linear-gradient(135deg, #f5f0e8, #c8a456 48%, #e8dcc8)", panel: "#f5f0e8", color: "#1a3a2a" },
+  { name: "The Silky Difference", title: "RARE TEXTURE. INSTANT ABSORPTION.", copy: "This is the shea most people haven't tried yet. A smooth, smooth texture that melts in fast, rather than the harder, heavier bar many people expect from shea butter.", year: "East African Nile Belt", bg: "linear-gradient(135deg, #e8dcc8, #8fa88b 48%, #d4c9b5)", panel: "#e8dcc8", color: "#1a3a2a" },
+  { name: "One-Jar Ritual", title: "FACE. LIPS. BODY. HAIR ENDS.", copy: "One versatile jar replaces unnecessary complexity. No synthetic fillers and no added fragrance. Just pure East African luxury for everyday softness.", year: "100% Nilotica Shea", bg: "linear-gradient(135deg, #00539C, #00539C 45%, #00539C)", panel: "#1a3a2a", color: "#f5f0e8" },
+  { name: "Women-Led Source", title: "DIRECT PARTNERSHIPS. SHARED VALUE.", copy: "Women led cooperatives in Northern Uganda gather wild fallen nuts. Cooperative premiums help support community infrastructure, financial independence, and tree conservation.", year: "Cooperative Sourcing", bg: "linear-gradient(135deg, #c8a456, #a08540 50%, #f5f0e8)", panel: "#c8a456", color: "#1a3a2a" }
 ];
 
 const testimonials = [
-  { text: "A lower melting point gives Nilotica its signature silky texture and instant absorption.", author: "Texture" },
-  { text: "Naturally occurring oleic acid helps reinforce the skin's moisture barrier and soften rough texture.", author: "Performance" },
+  { text: "A silky, quick melting texture gives Nilotica its signature feel and quick absorption.", author: "Texture" },
+  { text: "A silky, quick melting texture that sinks in quickly, leaving skin soft instead of sitting on top of it.", author: "Performance" },
   { text: "Direct cooperative partnerships connect every jar to women harvesters and tree conservation in Northern Uganda.", author: "Source" }
 ];
 

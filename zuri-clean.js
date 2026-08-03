@@ -41,6 +41,7 @@ if ("IntersectionObserver" in window) {
 
 document.querySelectorAll(".contact-form").forEach((form) => {
   form.addEventListener("submit", (event) => {
+    if (form.getAttribute("action") && form.getAttribute("action") !== "#") return;
     event.preventDefault();
     const status = form.querySelector(".form-status");
     if (status) status.textContent = "Thank you. We will reply soon.";
