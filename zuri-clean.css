@@ -1387,3 +1387,88 @@ button:focus-visible {
     opacity: 0.28;
   }
 }
+
+.qr-welcome[hidden] {
+  display: none;
+}
+
+.qr-welcome {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: grid;
+  place-items: center;
+  padding: clamp(18px, 4vw, 40px);
+}
+
+.qr-welcome-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(23, 23, 19, 0.48);
+  backdrop-filter: blur(5px);
+}
+
+.qr-welcome-panel {
+  position: relative;
+  width: min(100%, 560px);
+  border: 1px solid rgba(23, 23, 19, 0.12);
+  border-radius: 28px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+  padding: clamp(28px, 5vw, 46px);
+}
+
+.qr-welcome-panel h2 {
+  max-width: 440px;
+  margin: 8px 0 18px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(42px, 8vw, 70px);
+  font-weight: 700;
+  line-height: 0.92;
+}
+
+.qr-welcome-panel p:not(.kicker) {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.qr-welcome-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.qr-welcome-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+body.qr-welcome-open {
+  overflow: hidden;
+}
+
+@media (width <= 620px) {
+  .qr-welcome-panel {
+    border-radius: 22px;
+    padding: 28px 22px;
+  }
+
+  .qr-welcome-actions .button,
+  .qr-welcome-actions .button-secondary {
+    width: 100%;
+  }
+}

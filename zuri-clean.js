@@ -48,3 +48,29 @@ document.querySelectorAll(".contact-form").forEach((form) => {
     form.reset();
   });
 });
+
+const qrWelcome = document.getElementById("qr-welcome");
+
+if (qrWelcome) {
+  const params = new URLSearchParams(window.location.search);
+  const shouldShowQrWelcome = params.get("qr") === "1";
+  const closeButtons = qrWelcome.querySelectorAll("[data-qr-close]");
+  const closeQrWelcome = () => {
+    qrWelcome.hidden = true;
+    document.body.classList.remove("qr-welcome-open");
+  };
+
+  if (shouldShowQrWelcome) {
+    qrWelcome.hidden = false;
+    document.body.classList.add("qr-welcome-open");
+    qrWelcome.querySelector(".qr-welcome-close")?.focus();
+  }
+
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", closeQrWelcome);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !qrWelcome.hidden) closeQrWelcome();
+  });
+}

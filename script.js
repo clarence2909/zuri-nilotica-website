@@ -1,7 +1,7 @@
 const brands = [
   { name: "The Rare Ingredient", title: "COLD PRESSED. SILKY. ONE INGREDIENT.", copy: "Cold pressed from wild Vitellaria nilotica in Northern Uganda, this rare balm melts on contact and absorbs quickly, delivering rich moisture with a silky finish.", year: "Northern Uganda", bg: "linear-gradient(135deg, #f5f0e8, #c8a456 48%, #e8dcc8)", panel: "#f5f0e8", color: "#1a3a2a" },
   { name: "The Silky Difference", title: "RARE TEXTURE. INSTANT ABSORPTION.", copy: "This is the shea most people haven't tried yet. A smooth, smooth texture that melts in fast, rather than the harder, heavier bar many people expect from shea butter.", year: "East African Nile Belt", bg: "linear-gradient(135deg, #e8dcc8, #8fa88b 48%, #d4c9b5)", panel: "#e8dcc8", color: "#1a3a2a" },
-  { name: "One-Jar Ritual", title: "FACE. LIPS. BODY. HAIR ENDS.", copy: "One versatile jar replaces unnecessary complexity. No synthetic fillers and no added fragrance. Just pure East African luxury for everyday softness.", year: "100% Nilotica Shea", bg: "linear-gradient(135deg, #00539C, #00539C 45%, #00539C)", panel: "#1a3a2a", color: "#f5f0e8" },
+  { name: "One Jar Routine", title: "FACE. LIPS. BODY. HAIR ENDS.", copy: "One versatile jar replaces unnecessary complexity. No synthetic fillers and no added fragrance. Just pure East African luxury for everyday softness.", year: "100% Nilotica Shea", bg: "linear-gradient(135deg, #00539C, #00539C 45%, #00539C)", panel: "#1a3a2a", color: "#f5f0e8" },
   { name: "Women-Led Source", title: "DIRECT PARTNERSHIPS. SHARED VALUE.", copy: "Women led cooperatives in Northern Uganda gather wild fallen nuts. Cooperative premiums help support community infrastructure, financial independence, and tree conservation.", year: "Cooperative Sourcing", bg: "linear-gradient(135deg, #c8a456, #a08540 50%, #f5f0e8)", panel: "#c8a456", color: "#1a3a2a" }
 ];
 
@@ -57,7 +57,7 @@ function renderBrands() {
         <div class="brand-info-left">
           <h3>${brand.title}</h3>
           <p>${brand.copy}</p>
-          <a class="pill-btn brand-button" href="products.html">Discover the Ritual</a>
+          <a class="pill-btn brand-button" href="products.html">Discover Daily Care</a>
           <div class="brand-meta">
             <span>Origin:</span>
             <span>${brand.year}</span>

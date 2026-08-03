@@ -27,8 +27,8 @@ Do not treat `zuri-nilotica-proper-site/` as the deployed site. It is an older, 
 ## Page content
 
 - Home: brand introduction, Ugandan origin, collection carousel, Nilotica benefits, sourcing values, testimonials, and product calls to action.
-- Product: benefits, usage ritual, single ingredient, Ugandan origin, and Amazon calls to action.
-- About: brand story, origin and process imagery, ritual, and the Pure/Traceable/Useful values.
+- Product: benefits, usage routine, single ingredient, Ugandan origin, and Amazon calls to action.
+- About: brand story, origin and process imagery, daily care, and the Pure/Traceable/Useful values.
 - Sourcing: Nile Basin origin, harvest/drying/preparation process, tree stewardship, ingredient transparency, and sourcing call to action.
 - Contact: product and wholesale questions, contact details, Amazon link, and a client-side contact form.
 
