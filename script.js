@@ -1,55 +1,14 @@
 const brands = [
-  {
-    name: "Pure Nilotica",
-    title: "THE ESSENTIAL. UNREFINED. UNMATCHED.",
-    copy: "Cold-pressed from the fruit of wild Vitellaria nilotica trees in East Africa, this is shea butter in its purest, most potent form. Softer and more absorbent than conventional shea, it melts on contact — delivering deep moisture without residue.",
-    year: "2026",
-    bg: "linear-gradient(135deg, #f5f0e8, #c8a456 48%, #e8dcc8)",
-    panel: "#f5f0e8",
-    color: "#1a3a2a"
-  },
-  {
-    name: "Body Crème",
-    title: "DEEP NOURISHMENT. WEIGHTLESS FINISH.",
-    copy: "A refined body crème built on a base of pure Nilotica shea butter, blended with cold-pressed marula oil and a whisper of raw African honey extract. It absorbs completely, leaving skin supple and quietly luminous.",
-    year: "2026",
-    bg: "linear-gradient(135deg, #e8dcc8, #8fa88b 48%, #d4c9b5)",
-    panel: "#e8dcc8",
-    color: "#1a3a2a"
-  },
-  {
-    name: "Facial Oil",
-    title: "CALM. REPAIR. GLOW.",
-    copy: "A concentrated facial oil that pairs Nilotica shea oil with cold-pressed baobab seed oil — two of Africa's most nutrient-rich botanicals. Three drops, pressed gently into clean skin. That is all.",
-    year: "2026",
-    bg: "linear-gradient(135deg, #00539C, #00539C 45%, #00539C)",
-    panel: "#1a3a2a",
-    color: "#f5f0e8"
-  },
-  {
-    name: "Lip Treatment",
-    title: "SOFTNESS, DISTILLED.",
-    copy: "Pure Nilotica shea butter and a trace of cold-pressed coconut oil — nothing else. It coats the lips in a veil of moisture that lasts, repairs, and protects without wax, petroleum, or artificial texture.",
-    year: "2026",
-    bg: "linear-gradient(135deg, #c8a456, #a08540 50%, #f5f0e8)",
-    panel: "#c8a456",
-    color: "#1a3a2a"
-  }
+  { name: "The Rare Ingredient", title: "COLD-PRESSED. SILKY. SINGLE-INGREDIENT.", copy: "Cold-pressed from wild Vitellaria nilotica in Northern Uganda, this rare balm melts on contact and absorbs quickly, delivering rich moisture with a silky finish.", year: "Northern Uganda", bg: "linear-gradient(135deg, #f5f0e8, #c8a456 48%, #e8dcc8)", panel: "#f5f0e8", color: "#1a3a2a" },
+  { name: "The Silky Difference", title: "LOWER MELTING POINT. INSTANT ABSORPTION.", copy: "Nilotica naturally contains up to 57% oleic acid, compared with about 40% in standard shea. The result is a smooth, non-grainy texture and fast absorption.", year: "East African Nile Belt", bg: "linear-gradient(135deg, #e8dcc8, #8fa88b 48%, #d4c9b5)", panel: "#e8dcc8", color: "#1a3a2a" },
+  { name: "One-Jar Ritual", title: "FACE. LIPS. BODY. HAIR ENDS.", copy: "One versatile jar replaces unnecessary complexity. Zero synthetic fillers, zero fragrance - just pure East African luxury for everyday softness.", year: "100% Nilotica Shea", bg: "linear-gradient(135deg, #00539C, #00539C 45%, #00539C)", panel: "#1a3a2a", color: "#f5f0e8" },
+  { name: "Women-Led Source", title: "DIRECT PARTNERSHIPS. SHARED VALUE.", copy: "Women-led cooperatives in Northern Uganda gather wild fallen nuts. Fair-trade premiums help support community infrastructure, financial independence, and tree conservation.", year: "Cooperative Sourcing", bg: "linear-gradient(135deg, #c8a456, #a08540 50%, #f5f0e8)", panel: "#c8a456", color: "#1a3a2a" }
 ];
 
 const testimonials = [
-  {
-    text: "I've never used anything that absorbs this quickly — and knowing it comes straight from Uganda makes it even more special.",
-    author: "Early Customer"
-  },
-  {
-    text: "This is the first shea butter that actually feels like it came from the tree — rich, soft, and completely natural.",
-    author: "Skincare Enthusiast"
-  },
-  {
-    text: "Knowing my purchase supports the women who harvest it makes every application feel meaningful.",
-    author: "Conscious Buyer"
-  }
+  { text: "A lower melting point gives Nilotica its signature silky texture and instant absorption.", author: "Texture" },
+  { text: "Naturally occurring oleic acid helps reinforce the skin's moisture barrier and soften rough texture.", author: "Performance" },
+  { text: "Direct cooperative partnerships connect every jar to women harvesters and tree conservation in Northern Uganda.", author: "Source" }
 ];
 
 const menuButton = document.querySelector(".menu-btn");
@@ -98,9 +57,9 @@ function renderBrands() {
         <div class="brand-info-left">
           <h3>${brand.title}</h3>
           <p>${brand.copy}</p>
-          <a class="pill-btn brand-button" href="products.html">Discover the Collection</a>
+          <a class="pill-btn brand-button" href="products.html">Discover the Ritual</a>
           <div class="brand-meta">
-            <span>Year Of Investment:</span>
+            <span>Origin:</span>
             <span>${brand.year}</span>
           </div>
         </div>
