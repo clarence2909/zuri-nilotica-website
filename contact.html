@@ -73,11 +73,8 @@
             <p><strong>Common questions</strong><br>Texture, storage, face and body use, hair ends, wholesale, and cooperative sourcing.</p>
           </div>
         </div>
-        <form class="contact-form" action="https://formsubmit.co/zurinilotica@gmail.com" method="post">
-          <input type="hidden" name="_subject" value="New Zuri Nilotica website message">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="text" name="_honey" autocomplete="off" tabindex="-1" aria-hidden="true" hidden>
+        <form class="contact-form" action="/.netlify/functions/contact" method="post">
+          <input type="text" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" hidden>
           <label>
             Name
             <input type="text" name="name" autocomplete="name" required>

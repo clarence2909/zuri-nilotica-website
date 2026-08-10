@@ -40,12 +40,44 @@ if ("IntersectionObserver" in window) {
 }
 
 document.querySelectorAll(".contact-form").forEach((form) => {
-  form.addEventListener("submit", (event) => {
-    if (form.getAttribute("action") && form.getAttribute("action") !== "#") return;
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
+
     const status = form.querySelector(".form-status");
-    if (status) status.textContent = "Thank you. We will reply soon.";
-    form.reset();
+    const submitButton = form.querySelector('button[type="submit"]');
+    const formData = new FormData(form);
+    const payload = {
+      name: String(formData.get("name") || "").trim(),
+      email: String(formData.get("email") || "").trim(),
+      message: String(formData.get("message") || "").trim(),
+      website: String(formData.get("website") || "").trim(),
+    };
+
+    if (status) status.textContent = "Sending...";
+    if (submitButton) submitButton.disabled = true;
+
+    try {
+      const response = await fetch(form.getAttribute("action") || "/.netlify/functions/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok || result.ok === false) {
+        throw new Error(result.message || "Failed to send message.");
+      }
+
+      form.reset();
+      if (status) status.textContent = result.message || "Message sent successfully.";
+    } catch {
+      if (status) status.textContent = "Failed to send message. Please try again or email us directly.";
+    } finally {
+      if (submitButton) submitButton.disabled = false;
+    }
   });
 });
 
