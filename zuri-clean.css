@@ -1546,3 +1546,81 @@ body[data-page="home"] .home-hero-mini-nav {
 body[data-page="home"] .hero-content {
   padding-top: clamp(132px, 11vw, 166px) !important;
 }
+/* Readable content sizing pass */
+.section p,
+.hero-note,
+.full-bleed-photo p,
+.ritual-copy p,
+.ritual-side p,
+.contact-list p,
+.proof-card p,
+.content-card p {
+  font-size: clamp(19px, 1.45vw, 24px) !important;
+  line-height: 1.5 !important;
+}
+
+.copy-stack {
+  gap: clamp(18px, 1.8vw, 26px) !important;
+}
+
+.proof-card p,
+.content-card p,
+.contact-list p {
+  font-size: clamp(18px, 1.25vw, 21px) !important;
+}
+
+.hero-note {
+  max-width: 620px !important;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-size: clamp(17px, 1.15vw, 20px) !important;
+  line-height: 1.45 !important;
+}
+
+.form-status {
+  font-size: clamp(15px, 1vw, 17px) !important;
+}
+
+@media (max-width: 760px) {
+  .section p,
+  .hero-note,
+  .full-bleed-photo p,
+  .ritual-copy p,
+  .ritual-side p,
+  .contact-list p,
+  .proof-card p,
+  .content-card p {
+    font-size: 17px !important;
+    line-height: 1.55 !important;
+  }
+}
+/* Actual label logo header pass */
+.brand-mark {
+  width: 118px !important;
+  height: 92px !important;
+}
+
+.brand-logo-img {
+  display: block !important;
+  width: 106px !important;
+  height: 84px !important;
+  object-fit: contain !important;
+}
+
+.mark-symbol {
+  display: none !important;
+}
+
+@media (max-width: 1024px) {
+  .brand-mark {
+    width: 86px !important;
+    height: 74px !important;
+  }
+
+  .brand-logo-img {
+    width: 78px !important;
+    height: 66px !important;
+  }
+}

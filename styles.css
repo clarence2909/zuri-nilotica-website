@@ -4717,8 +4717,7 @@ canvas {
 .about-hero-product img,
 .about-showcase-product img,
 .about-side-panel img,
-.origin-media img,
-.card-image {
+.origin-media img {
   width: min(100%, 92vw);
   height: auto;
   object-fit: contain;
@@ -5116,4 +5115,89 @@ body[data-page="home"] .home-hero-mini-nav {
 
 body[data-page="home"] .hero-content {
   padding-top: clamp(132px, 11vw, 166px) !important;
+}
+/* Home source-story card fit fixes */
+body[data-page="home"] .recent-news-section .news-grid {
+  align-items: start !important;
+}
+
+body[data-page="home"] .recent-news-section .news-card {
+  background: #fffaf1 !important;
+  border-radius: 26px !important;
+  padding: clamp(8px, 1vw, 14px) !important;
+  box-shadow: 0 18px 45px rgba(23, 23, 19, 0.07) !important;
+}
+
+body[data-page="home"] .recent-news-section .card-image {
+  width: 100% !important;
+  aspect-ratio: 377 / 260 !important;
+  height: auto !important;
+  border-radius: 20px !important;
+  object-fit: cover !important;
+}
+
+body[data-page="home"] .recent-news-section .news-content {
+  min-height: 0 !important;
+  padding: 18px 10px 8px !important;
+}
+
+body[data-page="home"] .recent-news-section .news-content p {
+  font-size: clamp(16px, 1.35vw, 21px) !important;
+  line-height: 1.35 !important;
+}
+/* Readable content sizing pass */
+body[data-page="about"] .about-copy-columns p,
+body[data-page="about"] .about-value-row p,
+body[data-page="about"] .about-hero-note,
+body[data-page="about"] .about-centered-heading p,
+body[data-page="about"] .footer-copy,
+body[data-page="products"] .product-card p,
+body[data-page="products"] .contact-panel p {
+  font-size: clamp(19px, 1.45vw, 24px) !important;
+  line-height: 1.5 !important;
+}
+
+body[data-page="about"] .about-value-row p,
+body[data-page="about"] .footer-copy {
+  font-size: clamp(18px, 1.25vw, 21px) !important;
+}
+
+@media (max-width: 760px) {
+  body[data-page="about"] .about-copy-columns p,
+  body[data-page="about"] .about-value-row p,
+  body[data-page="about"] .about-hero-note,
+  body[data-page="about"] .about-centered-heading p,
+  body[data-page="products"] .product-card p,
+  body[data-page="products"] .contact-panel p {
+    font-size: 17px !important;
+    line-height: 1.55 !important;
+  }
+}
+/* Actual label logo header pass */
+.brand-mark {
+  width: 118px !important;
+  height: 92px !important;
+}
+
+.brand-logo-img {
+  display: block !important;
+  width: 106px !important;
+  height: 84px !important;
+  object-fit: contain !important;
+}
+
+.mark-symbol {
+  display: none !important;
+}
+
+@media (max-width: 1024px) {
+  .brand-mark {
+    width: 86px !important;
+    height: 74px !important;
+  }
+
+  .brand-logo-img {
+    width: 78px !important;
+    height: 66px !important;
+  }
 }
