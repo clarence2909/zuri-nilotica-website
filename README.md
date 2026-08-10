@@ -65,7 +65,7 @@ The visual language is editorial, premium, natural, and Ugandan-source focused.
 - Display typeface: Cormorant Garamond.
 - UI/body typeface: Inter.
 - Fonts load from Google Fonts in both CSS files.
-- Core colors include sky blue `#BEE1F7`, dark ink `#171713`, warm gold `#c8a456`, cream/paper neutrals, sage, and clay.
+- Core colors now follow the product packaging: warm label cream `#efe5cf`, soft ivory and oat neutrals, dark ink `#171713`, wood tan `#d2b482`, and deeper natural brown accents.
 - Layout uses large editorial typography, whitespace, rounded cards, product cutouts, source photography, and responsive botanical overlays.
 - The fixed header and mobile menu are shared conceptually, but styling is duplicated between `styles.css` and `zuri-clean.css`.
 - Responsive breakpoints live directly in the CSS. Test desktop, tablet, and narrow mobile layouts after structural changes.

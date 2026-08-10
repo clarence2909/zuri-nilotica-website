@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  --sky: #BEE1F7;
+  --sky: #efe5cf;
   --ink: #171713;
   --muted: #666157;
   --paper: #ffffff;
-  --cream: #f6f2ea;
+  --cream: #f4ead8;
   --line: rgba(23, 23, 19, 0.12);
-  --sage: #6f8061;
-  --gold: #c8a456;
-  --clay: #b9845e;
+  --sage: #9a7448;
+  --gold: #d2b482;
+  --clay: #a97845;
   --shadow: 0 24px 54px rgba(23, 23, 19, 0.08);
   --gutter: clamp(22px, 5vw, 92px);
 }
@@ -1471,4 +1471,78 @@ body.qr-welcome-open {
   .qr-welcome-actions .button-secondary {
     width: 100%;
   }
+}
+/* Responsive header collision fixes */
+@media (min-width: 1025px) {
+  .header-inner {
+    display: grid !important;
+    grid-template-columns: auto minmax(120px, 1fr) auto !important;
+    align-items: center !important;
+    gap: clamp(18px, 3vw, 56px) !important;
+  }
+
+  .brand-mark {
+    grid-column: 1 !important;
+    justify-self: start !important;
+  }
+
+  .wordmark {
+    position: static !important;
+    left: auto !important;
+    grid-column: 2 !important;
+    justify-self: center !important;
+    transform: none !important;
+    white-space: nowrap !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .desktop-nav {
+    grid-column: 3 !important;
+    justify-self: end !important;
+    gap: clamp(18px, 2vw, 34px) !important;
+  }
+
+  .desktop-nav a {
+    white-space: nowrap !important;
+    font-size: clamp(16px, 1.35vw, 18px) !important;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .wordmark {
+    display: none !important;
+  }
+
+  .header-inner {
+    grid-template-columns: auto 1fr !important;
+  }
+
+  .desktop-nav {
+    grid-column: 2 !important;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1160px) {
+  .desktop-nav {
+    gap: 18px !important;
+  }
+
+  .desktop-nav a {
+    font-size: 16px !important;
+  }
+
+  .nav-buy {
+    padding-right: 18px !important;
+    padding-left: 18px !important;
+  }
+}
+
+body[data-page="home"] .home-hero-mini-nav {
+  top: clamp(112px, 9vw, 136px) !important;
+}
+
+body[data-page="home"] .hero-content {
+  padding-top: clamp(132px, 11vw, 166px) !important;
 }

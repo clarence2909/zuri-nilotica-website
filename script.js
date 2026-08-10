@@ -1,14 +1,14 @@
 const brands = [
-  { name: "The Rare Ingredient", title: "COLD PRESSED. SILKY. ONE INGREDIENT.", copy: "Cold pressed from wild Vitellaria nilotica in Northern Uganda, this rare balm melts on contact and absorbs quickly, delivering rich moisture with a silky finish.", year: "Northern Uganda", bg: "linear-gradient(135deg, #f5f0e8, #c8a456 48%, #e8dcc8)", panel: "#f5f0e8", color: "#1a3a2a" },
-  { name: "The Silky Difference", title: "RARE TEXTURE. INSTANT ABSORPTION.", copy: "This is the shea most people haven't tried yet. A smooth, smooth texture that melts in fast, rather than the harder, heavier bar many people expect from shea butter.", year: "East African Nile Belt", bg: "linear-gradient(135deg, #e8dcc8, #8fa88b 48%, #d4c9b5)", panel: "#e8dcc8", color: "#1a3a2a" },
-  { name: "One Jar Routine", title: "FACE. LIPS. BODY. HAIR ENDS.", copy: "One versatile jar replaces unnecessary complexity. No synthetic fillers and no added fragrance. Just pure East African luxury for everyday softness.", year: "100% Nilotica Shea", bg: "linear-gradient(135deg, #00539C, #00539C 45%, #00539C)", panel: "#1a3a2a", color: "#f5f0e8" },
-  { name: "Women-Led Source", title: "DIRECT PARTNERSHIPS. SHARED VALUE.", copy: "Women led cooperatives in Northern Uganda gather wild fallen nuts. Cooperative premiums help support community infrastructure, financial independence, and tree conservation.", year: "Cooperative Sourcing", bg: "linear-gradient(135deg, #c8a456, #a08540 50%, #f5f0e8)", panel: "#c8a456", color: "#1a3a2a" }
+  { name: "The Rare Ingredient", title: "COLD PRESSED. SILKY. ONE INGREDIENT.", copy: "Cold pressed from wild Vitellaria nilotica in Northern Uganda, this rare balm melts on contact and absorbs quickly, delivering rich moisture with a silky finish.", year: "Northern Uganda", bg: "linear-gradient(135deg, #f4ead8, #d2b482 48%, #e6d8bd)", panel: "#f4ead8", color: "#171713" },
+  { name: "The Silky Difference", title: "RARE TEXTURE. INSTANT ABSORPTION.", copy: "This is the shea most people haven't tried yet. A smooth texture that melts in fast, rather than the harder, heavier bar many people expect from shea butter.", year: "East African Nile Belt", bg: "linear-gradient(135deg, #e6d8bd, #b78955 48%, #d8c4a2)", panel: "#e6d8bd", color: "#171713" },
+  { name: "One Jar Daily Care", title: "FACE. LIPS. BODY. HAIR ENDS.", copy: "A small amount softens dry skin, lips, elbows, hands, and hair ends. It melts quickly, feels silky, and keeps daily care simple.", year: "100% Nilotica Shea", bg: "linear-gradient(135deg, #fffaf1, #d2b482 52%, #a97845)", panel: "#fffaf1", color: "#171713" },
+  { name: "Women-Led Source", title: "DIRECT PARTNERSHIPS. SHARED VALUE.", copy: "Women led cooperatives in Northern Uganda gather wild fallen nuts. Cooperative premiums help support community infrastructure, financial independence, and tree conservation.", year: "Cooperative Sourcing", bg: "linear-gradient(135deg, #d2b482, #a97845 50%, #f4ead8)", panel: "#d2b482", color: "#171713" }
 ];
 
 const testimonials = [
-  { text: "A silky, quick melting texture gives Nilotica its signature feel and quick absorption.", author: "Texture" },
-  { text: "A silky, quick melting texture that sinks in quickly, leaving skin soft instead of sitting on top of it.", author: "Performance" },
-  { text: "Direct cooperative partnerships connect every jar to women harvesters and tree conservation in Northern Uganda.", author: "Source" }
+  { text: "Silky Nilotica shea melts on contact, so a little goes far on dry hands, lips, elbows, body, and hair ends.", author: "Daily Care" },
+  { text: "The texture sinks in quickly and leaves skin soft, comfortable, and cared for without a heavy greasy finish.", author: "Performance" },
+  { text: "Cold pressed from wild Nilotica shea in Northern Uganda, each jar carries the story of its source.", author: "Northern Uganda" }
 ];
 
 const menuButton = document.querySelector(".menu-btn");
@@ -196,13 +196,13 @@ function initParticles() {
     mouse.y = e.clientY - rect.top;
   });
 
- const COLORS = [
-  { r: 0, g: 83, b: 156 },    // sapphire blue
-  { r: 64, g: 156, b: 255 },  // bright blue
-  { r: 173, g: 216, b: 255 }, // light blue
-  { r: 230, g: 245, b: 255 }, // icy blue
-  { r: 120, g: 190, b: 255 }  // soft sky blue
-];
+  const COLORS = [
+    { r: 239, g: 229, b: 207 }, // warm label cream
+    { r: 244, g: 234, b: 216 }, // shea cream
+    { r: 210, g: 180, b: 130 }, // wood tan
+    { r: 230, g: 216, b: 189 }, // soft oat
+    { r: 169, g: 120, b: 69 }   // natural brown
+  ];
 
   for (let i = 0; i < NUM; i++) {
     const color = COLORS[Math.floor(Math.random() * COLORS.length)];
