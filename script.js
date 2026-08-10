@@ -1,14 +1,14 @@
 const brands = [
-  { name: "The Rare Ingredient", title: "COLD PRESSED. SILKY. ONE INGREDIENT.", copy: "Cold pressed from wild Vitellaria nilotica in Northern Uganda, this rare balm melts on contact and absorbs quickly, delivering rich moisture with a silky finish.", year: "Northern Uganda", bg: "linear-gradient(135deg, #f4ead8, #d2b482 48%, #e6d8bd)", panel: "#f4ead8", color: "#171713" },
-  { name: "The Silky Difference", title: "RARE TEXTURE. INSTANT ABSORPTION.", copy: "This is the shea most people haven't tried yet. A smooth texture that melts in fast, rather than the harder, heavier bar many people expect from shea butter.", year: "East African Nile Belt", bg: "linear-gradient(135deg, #e6d8bd, #b78955 48%, #d8c4a2)", panel: "#e6d8bd", color: "#171713" },
-  { name: "One Jar Daily Care", title: "FACE. LIPS. BODY. HAIR ENDS.", copy: "A small amount softens dry skin, lips, elbows, hands, and hair ends. It melts quickly, feels silky, and keeps daily care simple.", year: "100% Nilotica Shea", bg: "linear-gradient(135deg, #fffaf1, #d2b482 52%, #a97845)", panel: "#fffaf1", color: "#171713" },
-  { name: "Women-Led Source", title: "DIRECT PARTNERSHIPS. SHARED VALUE.", copy: "Women led cooperatives in Northern Uganda gather wild fallen nuts. Cooperative premiums help support community infrastructure, financial independence, and tree conservation.", year: "Cooperative Sourcing", bg: "linear-gradient(135deg, #d2b482, #a97845 50%, #f4ead8)", panel: "#d2b482", color: "#171713" }
+  { name: "The Rare Ingredient", title: "COLD PRESSED. SILKY. ONE INGREDIENT.", copy: "Cold pressed from wild Vitellaria nilotica in Northern Uganda, this rare balm melts on contact and absorbs quickly, delivering rich moisture with a silky finish.", year: "Northern Uganda", bg: "linear-gradient(90deg, rgba(23, 23, 19, 0.34), rgba(169, 120, 69, 0.36)), url('assets/carousel-bg-rare-ingredient.png')", panel: "#f4ead8", color: "#171713", gallery: ["assets/carousel-hands-shea-nuts.png", "assets/carousel-shea-nuts-drying.png", "assets/carousel-shea-landscape.png", "assets/carousel-women-cooperative.png"] },
+  { name: "The Silky Difference", title: "RARE TEXTURE. INSTANT ABSORPTION.", copy: "This is the shea most people haven't tried yet. A smooth texture that melts in fast, rather than the harder, heavier bar many people expect from shea butter.", year: "East African Nile Belt", bg: "linear-gradient(90deg, rgba(23, 23, 19, 0.34), rgba(169, 120, 69, 0.34)), url('assets/carousel-bg-silky-difference.png')", panel: "#e6d8bd", color: "#171713", gallery: ["assets/carousel-hands-shea-nuts.png", "assets/carousel-shea-nuts-drying.png", "assets/carousel-shea-landscape.png", "assets/carousel-women-cooperative.png"] },
+  { name: "One Jar Daily Care", title: "FACE. LIPS. BODY. HAIR ENDS.", copy: "A small amount softens dry skin, lips, elbows, hands, and hair ends. It melts quickly, feels silky, and keeps daily care simple.", year: "100% Nilotica Shea", bg: "linear-gradient(90deg, rgba(23, 23, 19, 0.30), rgba(169, 120, 69, 0.28)), url('assets/carousel-bg-daily-care.png')", panel: "#fffaf1", color: "#171713", gallery: ["assets/carousel-hands-shea-nuts.png", "assets/carousel-shea-nuts-drying.png", "assets/carousel-shea-landscape.png", "assets/carousel-women-cooperative.png"] },
+  { name: "Women-Led Source", title: "DIRECT PARTNERSHIPS. SHARED VALUE.", copy: "Women led cooperatives in Northern Uganda gather wild fallen nuts. Cooperative premiums help support community infrastructure, financial independence, and tree conservation.", year: "Cooperative Sourcing", bg: "linear-gradient(90deg, rgba(23, 23, 19, 0.42), rgba(169, 120, 69, 0.36)), url('assets/carousel-bg-women-source.png')", panel: "#d2b482", color: "#171713", gallery: ["assets/carousel-women-cooperative.png", "assets/carousel-shea-nuts-drying.png", "assets/carousel-shea-landscape.png", "assets/carousel-hands-shea-nuts.png"] }
 ];
 
 const testimonials = [
-  { text: "Silky Nilotica shea melts on contact, so a little goes far on dry hands, lips, elbows, body, and hair ends.", author: "Daily Care" },
-  { text: "The texture sinks in quickly and leaves skin soft, comfortable, and cared for without a heavy greasy finish.", author: "Performance" },
-  { text: "Cold pressed from wild Nilotica shea in Northern Uganda, each jar carries the story of its source.", author: "Northern Uganda" }
+  { text: "A little on dry hands, lips, elbows, body, or hair ends. Simple care from one jar.", author: "Daily Care" },
+  { text: "Soft, silky, and quick to melt in. No heavy layer sitting on the skin.", author: "Texture" },
+  { text: "Cold pressed Nilotica shea from Northern Uganda, sourced through cooperative partnerships.", author: "Source" }
 ];
 
 const menuButton = document.querySelector(".menu-btn");
@@ -64,10 +64,7 @@ function renderBrands() {
           </div>
         </div>
         <div class="brand-gallery" aria-hidden="true">
-          <span class="gallery-tile"></span>
-          <span class="gallery-tile"></span>
-          <span class="gallery-tile"></span>
-          <span class="gallery-tile"></span>
+          ${(brand.gallery || []).map((src) => `<span class="gallery-tile"><img src="${src}" alt="" loading="lazy"></span>`).join("")}
         </div>
       </div>
     </article>
@@ -139,7 +136,7 @@ let activeTestimonial = 0;
 
 function updateTestimonial() {
   if (!testimonialText || !testimonialAuthor) return;
-  testimonialText.textContent = `"${testimonials[activeTestimonial].text}"`;
+  testimonialText.textContent = testimonials[activeTestimonial].text;
   testimonialAuthor.textContent = testimonials[activeTestimonial].author;
 }
 
