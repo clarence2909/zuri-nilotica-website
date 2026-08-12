@@ -104,7 +104,7 @@ export async function handler(event) {
 
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
-    await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: FROM_EMAIL,
       to: TO_EMAIL,
       subject: `New website message from ${subjectName}`,
@@ -112,6 +112,11 @@ export async function handler(event) {
       html,
       text,
     });
+
+    if (error) {
+      console.error("Contact form email failed", error);
+      return jsonResponse(502, { ok: false, message: "Failed to send message. Please try again later." });
+    }
 
     return jsonResponse(200, { ok: true, message: "Message sent successfully." });
   } catch (error) {
