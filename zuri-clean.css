@@ -2293,6 +2293,46 @@ textarea,
   color: #8C5E3C !important;
 }
 
+/* Sourcing process cards: keep Harvest, Dry, and Prepare visually aligned */
+.source-steps {
+  align-items: stretch !important;
+  gap: clamp(18px, 2vw, 28px) !important;
+}
+
+.source-steps article {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+.source-steps img {
+  width: 100% !important;
+  height: clamp(420px, 36vw, 620px) !important;
+  min-height: 0 !important;
+  aspect-ratio: 4 / 5 !important;
+  border-radius: 18px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+.source-steps article:nth-child(3) img {
+  object-position: center center !important;
+}
+
+.source-steps h3 {
+  margin-top: 4px !important;
+  color: #582C12 !important;
+  font-size: clamp(38px, 3.6vw, 62px) !important;
+  line-height: 0.92 !important;
+}
+
+.source-steps p {
+  max-width: 95% !important;
+  color: #2D2A26 !important;
+  font-size: clamp(18px, 1.35vw, 25px) !important;
+  line-height: 1.45 !important;
+}
+
 .button,
 .nav-buy {
   background: #582C12 !important;
