@@ -27,7 +27,7 @@
   </script>
   <link rel="stylesheet" href="zuri-clean.css">
 </head>
-<body>
+<body data-page="products">
   <header class="site-header">
     <div class="header-inner">
       <a class="brand-mark" href="index.html" aria-label="Zuri Nilotica home"><img class="brand-logo-img" src="assets/zuri-logo-header.png" alt="" aria-hidden="true"></a>
@@ -53,20 +53,74 @@
 
   <main class="page-shell">
     <section class="hero">
-      <img class="editorial-png product-hero-png-branch" src="assets/shea-fruit-stem-cutout.png" alt="" aria-hidden="true" decoding="async">
-      <img class="editorial-png product-hero-png-nuts" src="assets/shea-nuts-cluster-cutout.png" alt="" aria-hidden="true" decoding="async">
       <nav class="mini-nav" aria-label="Product sections">
+        <a href="#product-gallery">Gallery</a>
         <a href="#benefits">Benefits</a>
         <a href="#routine">Routine</a>
         <a href="#ingredients">Ingredients</a>
       </nav>
       <p class="eyebrow">Pure East African Nilotica Shea</p>
-      <h1 class="hero-title">The Rare<br>Gem</h1>
-      <img class="hero-product" src="assets/zuri-product-sample-cutout.png" alt="Zuri Nilotica shea butter jar">
-      <p class="hero-note">Cold-pressed from Northern Uganda, Zuri Nilotica is a silky single-ingredient balm for face, lips, body, and hair ends.</p>
-      <div class="hero-actions">
-        <a class="button" href="https://www.amazon.com/" target="_blank" rel="noopener">Buy now on Amazon</a>
-        <a class="button-secondary" href="#ingredients">View ingredients</a>
+      <h1 class="hero-title">The Rare Gem<br>of East African Botanicals</h1>
+      <div class="pdp-content-card">
+        <p class="hero-note">Unlike traditional, hard West African shea butter, Zuri Nilotica is cold-pressed from the nuts of the Vitellaria paradoxa ssp. Nilotica tree native to Northern Uganda. Naturally rich in essential fatty acids and vitamins A &amp; E, it delivers intense moisture without clogging pores or leaving a heavy residue.</p>
+        <p class="hero-note">Unrefined, fragrance-free, and ethically harvested, every jar preserves its natural, light nutty aroma and creamy softness. Use daily to restore dry skin, soothe irritation, and seal in deep moisture from head to toe.</p>
+        <div class="size-selector" aria-label="Available product sizes">
+          <p>Available sizes</p>
+          <div>
+            <button type="button">100g</button>
+            <button type="button">200g</button>
+          </div>
+        </div>
+        <p class="sensory-heading">Sensory Profile Highlights</p>
+        <div class="sensory-badges" aria-label="Sensory profile highlights">
+          <article>
+            <span aria-hidden="true">✦</span>
+            <div>
+              <h2>Texture</h2>
+              <p>Soft, silky balm. No heating or whipping required.</p>
+            </div>
+          </article>
+          <article>
+            <span aria-hidden="true">↧</span>
+            <div>
+              <h2>Absorption</h2>
+              <p>Fast-absorbing, non-greasy finish.</p>
+            </div>
+          </article>
+          <article>
+            <span aria-hidden="true">◌</span>
+            <div>
+              <h2>Scent</h2>
+              <p>Light, naturally sweet and nutty. 100% unrefined.</p>
+            </div>
+          </article>
+        </div>
+        <div class="hero-actions">
+          <a class="button" href="https://www.amazon.com/" target="_blank" rel="noopener">Buy now on Amazon</a>
+          <a class="button-secondary" href="#ingredients">View ingredients</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="product-gallery" class="section product-gallery-section reveal" aria-label="Product gallery">
+      <div class="product-gallery-copy">
+        <p class="kicker">Product gallery</p>
+        <h2>Jar, texture, and application.</h2>
+        <p>See the product clearly: the jar, the soft Nilotica texture, and a placeholder for the future dry-skin application video.</p>
+      </div>
+      <div class="product-gallery-grid">
+        <figure class="product-gallery-card product-gallery-main">
+          <img src="assets/zuri-real-product-jar.jpeg" alt="Zuri Nilotica shea butter jar with visible product texture">
+          <figcaption>Main jar photo</figcaption>
+        </figure>
+        <figure class="product-gallery-card">
+          <img src="assets/zuri-real-shea-texture.jpeg" alt="Close-up of smooth Nilotica shea butter texture">
+          <figcaption>Macro texture</figcaption>
+        </figure>
+        <figure class="product-gallery-card product-video-placeholder">
+          <img src="assets/hero-butter.png" alt="Placeholder image for future dry-skin application video">
+          <figcaption>Future application video</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -77,7 +131,7 @@
           <p class="kicker">Sensory profile</p>
           <h2>Soft balm. Fast absorption. No heavy residue.</h2>
           <p>Zuri Nilotica has a soft, silky balm texture that needs no heating or whipping. A small amount melts on contact and spreads easily over dry-feeling skin.</p>
-          <p>Unrefined, fragrance-free, and cold-pressed, every jar keeps its natural light nutty aroma and creamy softness.</p>
+          <p>It is made for daily care across the face, lips, body, hands, and hair ends.</p>
           <a class="button" href="https://www.amazon.com/" target="_blank" rel="noopener">Buy now</a>
         </div>
         <div class="card-grid">
@@ -97,9 +151,65 @@
       </div>
     </section>
 
+    <section class="section nilotica-advantage-section reveal" aria-label="The Nilotica advantage">
+      <div class="advantage-header">
+        <p class="kicker">Comparison</p>
+        <h2>The Nilotica Advantage</h2>
+        <p>Nilotica shea is chosen for how it feels in use: soft, silky, quick to melt, and easy to apply straight from the jar.</p>
+      </div>
+      <div class="advantage-banner" aria-label="Texture comparison visual">
+        <figure>
+          <img src="assets/shea-butter-mound-cutout.png" alt="Firm white shea butter texture">
+          <figcaption>Harder shea texture many people expect</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/zuri-real-shea-texture.jpeg" alt="Smooth Nilotica shea butter texture">
+          <figcaption>Smooth, creamy Zuri Nilotica texture</figcaption>
+        </figure>
+      </div>
+      <div class="advantage-table-wrap">
+        <table class="advantage-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Common shea experience</th>
+              <th>Zuri Nilotica</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Texture</td>
+              <td>Often firm, waxy, or grainy before warming.</td>
+              <td>Soft, silky balm that scoops easily.</td>
+            </tr>
+            <tr>
+              <td>Melting feel</td>
+              <td>Usually needs more rubbing to soften.</td>
+              <td>Melts quickly on contact with skin.</td>
+            </tr>
+            <tr>
+              <td>Finish</td>
+              <td>Can feel heavy if too much is applied.</td>
+              <td>Spreads thinly with a smooth, non-greasy feel.</td>
+            </tr>
+            <tr>
+              <td>Use</td>
+              <td>Often saved for rough spots only.</td>
+              <td>Easy for face, lips, body, hands, and hair ends.</td>
+            </tr>
+            <tr>
+              <td>Source story</td>
+              <td>Origin is not always clear.</td>
+              <td>Wild East African Nilotica sourced from Northern Uganda.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
     <section id="routine" class="section ritual-band reveal">
       <div class="giant-word" aria-hidden="true">Routine</div>
-      <img class="editorial-png ritual-png-butter" src="assets/shea-butter-mound-cutout.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img class="editorial-png ritual-png-butter" src="assets/zuri-texture-replacement.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
       <div class="ritual-copy">
         <p class="kicker">How to use</p>
         <h2>One jar. A simple routine.</h2>
@@ -113,7 +223,6 @@
     </section>
 
     <section id="ingredients" class="section reveal">
-      <img class="editorial-png ingredients-png-nuts" src="assets/shea-nuts-cluster-cutout.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
       <div class="section-grid">
         <div>
           <p class="kicker">Full ingredients</p>
@@ -121,37 +230,9 @@
           <p>No synthetic fillers. No added fragrance. No petroleum, mineral oil, parabens, or artificial color.</p>
           <p>Cold-pressed Nilotica may soften in warmth or firm in cooler temperatures. This natural shift does not change its quality.</p>
         </div>
-        <img src="assets/zuri-shea-ingredient-cluster.png" alt="Raw shea nuts, leaves, and creamy Nilotica shea butter">
       </div>
     </section>
 
-    <section class="section reveal">
-      <div class="section-grid">
-        <div class="copy-stack">
-          <p class="kicker">Why the source matters</p>
-          <h2>Rare East African shea, cold-pressed at the source.</h2>
-          <p>Every jar begins with wild Nilotica shea trees and fallen nuts gathered through women-led communities in Northern Uganda, then carefully dried and cold-pressed.</p>
-          <a class="button-secondary" href="sourcing.html">Read sourcing story</a>
-        </div>
-        <div class="proof-grid source-mini-proof">
-          <article class="proof-card">
-            <span>01</span>
-            <h3>Nile Basin origin</h3>
-            <p>Grown wild along the East African Nile belt and sourced in Northern Uganda.</p>
-          </article>
-          <article class="proof-card">
-            <span>02</span>
-            <h3>Tree respect</h3>
-            <p>Cooperative partnerships and cooperative premiums help support communities and conserve the trees behind future harvests.</p>
-          </article>
-          <article class="proof-card">
-            <span>03</span>
-            <h3>Clear ingredient</h3>
-            <p>One ingredient: 100% cold-pressed Nilotica shea butter, with zero synthetic fillers or fragrance.</p>
-          </article>
-        </div>
-      </div>
-    </section>
   </main>
 
 
